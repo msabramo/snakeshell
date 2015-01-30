@@ -3,11 +3,11 @@
 Snakeshell is a command line “parser” (mapper). What it really does is expose
 Python functions to the shell. Main features:
 
-* Very small codesize. A single Python module. About a hundred lines of code.
+* Very small code size. A single Python module. About a hundred lines of code.
 * The public API consists of a Python class, `CommandLineMapper`; plus two
-  methods, `add` and `run`.
+  methods: `add` and `run`.
 * No external dependencies.
-* Support for Python 3 (version 2 is comming).
+* Support for Python 3 (version 2 is coming).
 
 ## Installation
 
@@ -44,7 +44,7 @@ The last three instructions demonstrate the basic operation of the API.
 method.
 
 3. Call `CommandLineMapper.run`. At this point Snakeshell will process the
-command line, `sys.argv`, and invoke the matching function.
+command line, ``sys.argv``, and invoke the matching function.
 
 Suppose the above snippet is saved as `myscript.py`.
 
@@ -61,7 +61,7 @@ be ommited from the command line. If exposing more than one function, it is
 recommended to pass its name as the first program argument, otherwise the first
 exposed function will be called. See next section.
 
-2. There is no type validation/coersion. Snakeshell will only pass strings on
+2. There is no type validation/coercion. Snakeshell will only pass strings on
 function calls.
 
 ## Multiple Commands
@@ -188,7 +188,7 @@ some error handling function.
 
 Q. I want POSIX arguments.
 
-A. Wrong tool. There are plenty of Pyhthon command line parsing utilities
+A. Wrong tool. There are plenty of Python command line parsing utilities
 supporting POSIX. Try one of them.
 
 * Argparse/Optparse/Getopt. Built into Python. Complex.
@@ -198,7 +198,7 @@ supporting POSIX. Try one of them.
 * [Clint](https://github.com/kennethreitz/clint).
 * [Click](http://click.pocoo.org/3/).
 
-Q. I need type coersion.
+Q. I need type coercion.
 
 A. Implement it yourself, or use some third party library.
 
@@ -211,7 +211,7 @@ is too complex. YMMV.
 Q. Why not use `sys.argv` directly.
 
 A. Good question. I do this a lot of times. Actually, if your script is small
-enought and requires zero, one, or maybe two positional parameters, there is no
+enough and requires zero, one, or maybe two positional parameters, there is no
 need for command line processing tools. Write a couple of conditionals and
 print a simple help message in case of errors.
 
