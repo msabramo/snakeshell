@@ -1,7 +1,7 @@
 # snakeshell
 
-Snakeshell is a command line “parser”. What it really does is expose Python
-functions to the shell. Main features:
+Snakeshell is a command line “parser” (mapper). What it really does is expose
+Python functions to the shell. Main features:
 
 * Very small codesize. A single Python module. About a hundred lines of code.
 * The public API consists of a Python class, `CommandLineMapper`; plus two
